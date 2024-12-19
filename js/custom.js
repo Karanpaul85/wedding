@@ -58,12 +58,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     e.preventDefault();
     const hmMenu = document.querySelector(".hm");
     const nav = document.querySelector("nav");
-    hmMenu.classList.toggle("open");
-    nav.classList.toggle("open");
+    if (hmMenu && nav) {
+      hmMenu.classList.toggle("open");
+      nav.classList.toggle("open");
+    }
+
     const targetElement = document.querySelector(this.getAttribute("href"));
     const offsetPosition =
       targetElement.getBoundingClientRect().top + window.pageYOffset - 132;
-    nav.classList.remove("open");
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
@@ -84,4 +86,30 @@ galleryList.forEach((element) => {
 
   // Add the random color as a class to the element
   element.classList.add(randomColor);
+});
+
+/**zoom the image */
+galleryList.forEach((element) => {
+  element.addEventListener("click", function (e) {
+    const parentElem = e.target.parentElement;
+    const image = parentElem.querySelector("img");
+    const zoomDiv = document.createElement("div");
+    zoomDiv.className = "zoomSec";
+
+    // Create the zoom popup content
+    zoomDiv.innerHTML = `
+      <div class="close">Close</div>
+      <div class="zoomImageSec">${image.outerHTML}</div>
+    `;
+
+    // Append zoomDiv to the body
+    document.body.appendChild(zoomDiv);
+    document.body.style.overflow = "hidden";
+
+    // Attach close event to the close button
+    zoomDiv.querySelector(".close").addEventListener("click", function () {
+      document.body.style.overflow = ""; // Restore scroll
+      document.body.removeChild(zoomDiv); // Remove zoomDiv
+    });
+  });
 });

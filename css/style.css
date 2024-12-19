@@ -12,7 +12,7 @@ img{
     --lightBg:#f7f3f3;
     --pink:#e42269;
     --brown:#c09e6f;
-    --lightPink:#ff1493
+    --lightPink:#ff1493;
 }
 p{
     font-size: 18px;
@@ -371,6 +371,7 @@ main{
 }
 .gallery ul li{
   width: 25%;
+  cursor: pointer;
 }
 .gallery ul li .imgSec{
   padding-top: 100%;
@@ -399,11 +400,23 @@ main{
   justify-content: center;
   opacity: 0;
   font-size: 36px;
+  flex-direction: column;
 }
-.gallery ul li .imgSec .imgText.pink{}
-.gallery ul li .imgSec .imgText.black{}
-.gallery ul li .imgSec .imgText.brown{}
-.gallery ul li .imgSec .imgText.lightPink{}
+.gallery ul li .imgSec .imgText span{
+  font-size: 26px;
+}
+.gallery ul li .imgSec .imgText.pink{
+  background: rgba(228, 34, 105, 0.7);
+}
+.gallery ul li .imgSec .imgText.black{
+  background: rgba(0, 0, 0, 0.7);
+}
+.gallery ul li .imgSec .imgText.brown{
+  background: rgba(192, 158, 111, 0.7);
+}
+.gallery ul li .imgSec .imgText.lightPink{
+  background: rgba(255, 20, 147, 0.7);
+}
 .gallery ul li:hover .imgText{
   width: 100%;
   opacity: 1;
@@ -466,6 +479,47 @@ text-align: center;
   height: 100%;
   object-fit: cover;
 }
+.mapSec{
+  display: flex;
+  width: 100%;
+}
+.mapSec iframe{
+  width: 100%;
+}
+.whatupIcon{
+  position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+.zoomSec {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zoomSec .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--white);
+}
+.zoomSec .zoomImageSec {
+  width: 90vw;
+  border: 1px solid var(--lightBg);
+}
 
 @media(max-width:768px){
   .wrapper, header{
@@ -525,7 +579,7 @@ padding: 0;
     padding-top: 100%;
   }
   .bannerext .mainHeading {
-    font-size: 40px;
+    font-size: 36px;
 }
 .bannerext .subHeading {
   font-size: 16px;
@@ -584,5 +638,11 @@ justify-content: center;
 }
 nav.open{
   height: 260px;
+}
+.gallery ul li .imgSec .imgText{
+  font-size:26px
+}
+.gallery ul li .imgSec .imgText span{
+  font-size: 16px;
 }
 }
