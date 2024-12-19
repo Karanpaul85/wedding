@@ -12,6 +12,7 @@ img{
     --lightBg:#f7f3f3;
     --pink:#e42269;
     --brown:#c09e6f;
+    --lightPink:#ff1493
 }
 p{
     font-size: 18px;
@@ -390,7 +391,6 @@ main{
   left: 0;
   width: 0;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
   color: var(--white);
   z-index: 1;
   transition: all ease-in-out 0.25s;
@@ -400,6 +400,10 @@ main{
   opacity: 0;
   font-size: 36px;
 }
+.gallery ul li .imgSec .imgText.pink{}
+.gallery ul li .imgSec .imgText.black{}
+.gallery ul li .imgSec .imgText.brown{}
+.gallery ul li .imgSec .imgText.lightPink{}
 .gallery ul li:hover .imgText{
   width: 100%;
   opacity: 1;
