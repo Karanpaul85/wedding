@@ -517,7 +517,7 @@ text-align: center;
   color: var(--white);
 }
 .zoomSec .zoomImageSec {
-  width: 90vw;
+  width: 60vw;
   border: 1px solid var(--lightBg);
 }
 
@@ -644,5 +644,8 @@ nav.open{
 }
 .gallery ul li .imgSec .imgText span{
   font-size: 16px;
+}
+.zoomSec .zoomImageSec {
+  width:90vw;
 }
 }
