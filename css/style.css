@@ -312,7 +312,7 @@ main{
 }
 
 .aboutSection h2,
-.gallery h2, .videoSec h2{
+.gallery h2, .videoSec h2, .serveices h2, .whyUs h2{
   margin-bottom: 20px;
   font-size: 36px;
   color: var(--black);
@@ -354,7 +354,7 @@ main{
   color: var(--white);
   border-radius: 8px;
 }
-.gallery, .videoSec{
+.gallery, .videoSec, .serveices,  .whyUs,.mapSec{
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -363,7 +363,7 @@ main{
   gap: 20px;
 }
 
-.gallery ul{
+.gallery ul, .serveices ul{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -432,6 +432,8 @@ main{
   width: 50%;
   padding: 0 20px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .inner{
   width: 100%;
@@ -479,10 +481,7 @@ text-align: center;
   height: 100%;
   object-fit: cover;
 }
-.mapSec{
-  display: flex;
-  width: 100%;
-}
+
 .mapSec iframe{
   width: 100%;
 }
@@ -520,7 +519,33 @@ text-align: center;
   width: 60vw;
   border: 1px solid var(--lightBg);
 }
-
+.serveices ul {
+  gap: 10px;
+}
+.serveices ul li {
+  width: 49%;
+  text-align: left;
+  padding-left: 40px;
+  line-height: 1.5;
+  position: relative;
+  font-size: 20px;
+}
+.serveices ul li::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--lightPink);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+}
+.whyUs{
+padding: 0 30px;
+}
+.whyUs p{
+  font-size: 20px;
+  }
 @media(max-width:768px){
   .wrapper, header{
 padding: 0;
@@ -647,5 +672,8 @@ nav.open{
 }
 .zoomSec .zoomImageSec {
   width:90vw;
+}
+.serveices ul li{
+  width: 100%;
 }
 }
