@@ -546,6 +546,35 @@ padding: 0 30px;
 .whyUs p{
   font-size: 20px;
   }
+
+
+
+/* Add a keyframe animation for zoom-in */
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to active slides */
+#banner .splide__slide.is-active {
+  animation: zoomIn 3s ease-out forwards;
+  z-index: 1;
+}
+
+/* Ensure non-active slides don't overlap */
+#banner .splide__slide {
+  transition: transform 3s ease-out;
+  z-index: 0;
+}
+
+
+
 @media(max-width:768px){
   .wrapper, header{
 padding: 0;

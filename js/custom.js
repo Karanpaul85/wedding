@@ -1,11 +1,21 @@
 "use strict";
+// new Splide("#banner", {
+//   type: "fade", // Enables fade transition
+//   autoplay: true, // Automatically plays the slides
+//   arrows: false, // Hides navigation arrows
+//   interval: 3000, // Delay between slide transitions in milliseconds
+//   rewind: true, // Enables looping for fade type
+//   pagination: false,
+// }).mount();
+
 new Splide("#banner", {
-  type: "fade", // Enables fade transition
-  autoplay: true, // Automatically plays the slides
-  arrows: false, // Hides navigation arrows
-  interval: 3000, // Delay between slide transitions in milliseconds
-  rewind: true, // Enables looping for fade type
+  type: "fade",
+  perPage: 1,
+  autoplay: true,
+  interval: 4000,
+  rewind: true,
   pagination: false,
+  arrows: false,
 }).mount();
 
 new Splide("#testimonials", {
