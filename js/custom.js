@@ -1,10 +1,10 @@
 "use strict";
 // new Splide("#banner", {
-//   type: "fade", // Enables fade transition
-//   autoplay: true, // Automatically plays the slides
-//   arrows: false, // Hides navigation arrows
-//   interval: 3000, // Delay between slide transitions in milliseconds
-//   rewind: true, // Enables looping for fade type
+//   type: "fade",
+//   autoplay: true,
+//   arrows: false,
+//   interval: 3000,
+//   rewind: true,
 //   pagination: false,
 // }).mount();
 
@@ -19,11 +19,28 @@ new Splide("#banner", {
 }).mount();
 
 new Splide("#testimonials", {
-  type: "loop", // Enables fade transition
-  autoplay: true, // Automatically plays the slides
-  arrows: false, // Hides navigation arrows
+  type: "loop",
+  autoplay: true,
+  arrows: false,
   pagination: true,
+  interval: 4000,
+  speed: 2000,
 }).mount();
+
+// new Splide("#logoSlider", {
+//   type: "loop",
+//   perPage: 5,
+//   perMove: 1,
+//   autoplay: true,
+//   arrows: false,
+//   interval: 2000,
+//   gap: 10,
+//   breakpoints: {
+//     640: {
+//       perPage: 2,
+//     },
+//   },
+// }).mount();
 
 var scrollPosition = window.scrollY;
 var logoContainer = document.querySelector("header");

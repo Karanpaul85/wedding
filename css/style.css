@@ -13,6 +13,8 @@ img{
     --pink:#e42269;
     --brown:#c09e6f;
     --lightPink:#ff1493;
+    --logoColor:#e0c471;
+    --logoColor2:#ab7b33;
 }
 p{
     font-size: 18px;
@@ -299,7 +301,12 @@ text-shadow: none;
 .bannerext .callNow{
   color: var(--white) !important;
   background: rgba(0, 0, 0, 0.5);
+  /* border: 2px solid var(--logoColor); */
 }
+/* .bannerext .callNow:hover{
+  color: var(--black) !important;
+  background: var(--logoColor);
+} */
 main{
     background: var(--lightBg);
 }
@@ -337,21 +344,21 @@ main{
 }
 .callNow {
   padding: 10px 24px;
-  border: 2px solid var(--pink);
+  border: 2px solid var(--logoColor);
   margin-top: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--pink);
+  color: var(--brown);
   transition: all ease-in-out 0.25s;
   width: fit-content;
   min-width: 200px;
   font-size: 18px;
 }
 .callNow:hover{
-  background: var(--pink);
-  color: var(--white);
+  background: var(--logoColor);
+  color: var(--logoColor2) !important;
   border-radius: 8px;
 }
 .gallery, .videoSec, .serveices,  .whyUs,.mapSec{
@@ -473,7 +480,7 @@ text-align: center;
   width: 100%;
   padding-top: 46.875%;
 }
-.bannerAspectRatio img{
+.bannerAspectRatio img, .logoAspectRation img{
   position: absolute;
   top: 0;
   left: 0;
@@ -547,8 +554,18 @@ padding: 0 30px;
   font-size: 20px;
   }
 
-
-
+.logoSlider{
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+.logoAspectRation{
+  position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 46.875%;
+}
 /* Add a keyframe animation for zoom-in */
 @keyframes zoomIn {
   from {
@@ -599,7 +616,7 @@ padding: 0;
   }
   .mainHeader{
     padding: 10px;
-    justify-content: end;
+    justify-content: center;
   }
   .mainHeader .logo{
     max-width: 70px;
@@ -645,7 +662,7 @@ padding: 0;
 }
 .hm{
   position: absolute;
-  left: 10px;
+  right: 10px;
   width: 44px;
   height: 44px;
   display: flex;
