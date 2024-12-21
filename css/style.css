@@ -541,7 +541,7 @@ text-align: center;
   content: "";
   width: 8px;
   height: 8px;
-  background: var(--lightPink);
+  background: var(--logoColor);
   border-radius: 50%;
   position: absolute;
   top: 8px;
