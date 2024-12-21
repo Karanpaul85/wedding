@@ -27,20 +27,20 @@ new Splide("#testimonials", {
   speed: 2000,
 }).mount();
 
-// new Splide("#logoSlider", {
-//   type: "loop",
-//   perPage: 5,
-//   perMove: 1,
-//   autoplay: true,
-//   arrows: false,
-//   interval: 2000,
-//   gap: 10,
-//   breakpoints: {
-//     640: {
-//       perPage: 2,
-//     },
-//   },
-// }).mount();
+new Splide("#logoSlider", {
+  type: "loop",
+  perPage: 5,
+  perMove: 1,
+  autoplay: true,
+  arrows: false,
+  interval: 2000,
+  gap: 10,
+  breakpoints: {
+    640: {
+      perPage: 2,
+    },
+  },
+}).mount();
 
 var scrollPosition = window.scrollY;
 var logoContainer = document.querySelector("header");

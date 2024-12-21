@@ -319,7 +319,7 @@ main{
 }
 
 .aboutSection h2,
-.gallery h2, .videoSec h2, .serveices h2, .whyUs h2{
+.gallery h2, .videoSec h2, .serveices h2, .whyUs h2, .logoSlider h2{
   margin-bottom: 20px;
   font-size: 36px;
   color: var(--black);
@@ -480,7 +480,7 @@ text-align: center;
   width: 100%;
   padding-top: 46.875%;
 }
-.bannerAspectRatio img, .logoAspectRation img{
+.bannerAspectRatio img{
   position: absolute;
   top: 0;
   left: 0;
@@ -559,12 +559,23 @@ padding: 0 30px;
   width: 100%;
   margin-top: 50px;
   padding: 0 20px;
+  text-align: center;
 }
 .logoAspectRation{
   position: relative;
     display: block;
     width: 100%;
     padding-top: 46.875%;
+    background: var(--white);
+    border: 1px solid var(--brown);
+}
+.logoAspectRation img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 /* Add a keyframe animation for zoom-in */
 @keyframes zoomIn {
