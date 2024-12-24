@@ -33,6 +33,7 @@ new Splide("#logoSlider", {
   perMove: 1,
   autoplay: true,
   arrows: false,
+  pagination: false,
   interval: 2000,
   gap: 10,
   breakpoints: {
