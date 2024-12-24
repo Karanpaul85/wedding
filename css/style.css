@@ -248,7 +248,7 @@ header .topBar a{
 }
 .mainHeader  nav ul{
     display: flex;
-    font-size: 32px;
+    font-size: 36px;
     list-style: none;
     gap: 20px;
 }
